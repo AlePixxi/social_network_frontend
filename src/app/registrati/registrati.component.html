@@ -1,0 +1,51 @@
+<div class="content">
+    <div class="login-box">
+        <div class="login-box-left">
+            <span class="title">Benvenuto</span>
+            <p class="main-text" style="margin-top: 5%;">Questo é un nuovo social <br> scritto interamente in java e Angular <br> <br>
+                registrati per cominciare a condividere
+            </p>
+        </div>
+        <div class="login-box-right">
+            <span class="title">Registrati</span>
+            <p class="main-text" style="margin-top: 5%;">Effettua la registrazione <br> per avere provare le funzionalità del Social Network</p>
+
+            <form>
+                <div class="form-content" style="display: flex;">
+                    <div class="form-content--left">
+                        <div class="textbox">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="email@email" [(ngModel)]="utenteDaRegistrare.email">
+                        </div>
+                        <div class="textbox">
+                            <label for="nome">Nome</label>
+                            <input type="email" name="nome" placeholder="nome" [(ngModel)]="utenteDaRegistrare.nome">
+                        </div>
+                        <div class="textbox" >
+                            <label for="cognome">Cognome</label>
+                            <input type="email" name="cognome" placeholder="cognome" [(ngModel)]="utenteDaRegistrare.cognome">
+                        </div>
+                    </div>
+
+                    <div class="form-content--right">
+                        <div class="textbox" >
+                            <label for="password">Password</label>
+                            <input type="password" name="password" placeholder="password" [(ngModel)]="utenteDaRegistrare.password">
+                        </div>
+                        <div class="textbox">
+                            <label for="password_confirm">Conferma Password</label>
+                            <input type="password" name="password_confirm" placeholder="conferma password" [(ngModel)]="confermaPassword">
+                        </div>
+                        <div class="textbox">
+                            <label for="nazionalita">Nazionalità</label>
+                            <input type="text" name="nazionalita" placeholder="Nazionalità" [(ngModel)]="utenteDaRegistrare.nazionalita">
+                        </div>
+                    </div>
+                </div>
+                <div class="submit" style="width: 40%; margin-top: 10%;">
+                    <input type="submit" value="Registrati" (click)="onSubmit()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
