@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UtenteDaRegistrareDTO } from 'src/dto/UtenteDaRegistrareDTO';
-import { LoginService } from 'src/service/login.service';
+import { AuthenticationService as AuthenticationService } from 'src/service/authentication.service';
 
 @Component({
   selector: 'app-registrati',
@@ -14,7 +14,7 @@ export class RegistratiComponent {
 
   confermaPassword : string = "";
 
-  constructor(private registrazioneService: LoginService,private router: Router) {}
+  constructor(private registrazioneService: AuthenticationService,private router: Router) {}
 
   onSubmit() {
 
@@ -23,6 +23,7 @@ export class RegistratiComponent {
       next: (data) => {
         console.log(data);
         alert("registrazione andata a buon fine")
+        this.router.navigate(["login"])
       },
       error: (error) => {
         console.log(error);
